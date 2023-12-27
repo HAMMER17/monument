@@ -16,8 +16,10 @@ const HomePage = () => {
   const router = useRouter()
   const handlerSubmit = (data) => {
     console.log(data)
+
     dispatch(createData(data))
-    router.push(`/pages/${data.id}`)
+    // router.push(`/pages/${data.id}`)
+    // return (<Link href={`/pages/${data.id}`}>{data}</Link>)
   }
   return (
     <>
@@ -25,9 +27,9 @@ const HomePage = () => {
       <div className='homepage'>
 
         {data.map((elem, id) => (
-          <div className='card' key={id} onClick={() => handlerSubmit(elem)}>
+          <Link href={`/pages/${elem.id}`} className='card' key={id} onClick={() => handlerSubmit(elem)}>
             <Card logo={elem.title} props={elem.img} text={elem.text} />
-          </div>
+          </Link>
 
         ))}
       </div>

@@ -5,8 +5,8 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 
 
-export default function PageProfile() {
-  const data = useSelector((state) => state.data.value)
+export default async function PageProfile() {
+  const data = await useSelector((state) => state.data.value)
   console.log(data)
   return (
     <div >
