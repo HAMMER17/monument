@@ -1,0 +1,14 @@
+.header {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+  font-family: 'Kalnia', serif;
+  background: black;
+}
+
+a {
+  text-decoration: none;
+}
